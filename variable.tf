@@ -46,13 +46,6 @@ variable "force_destroy" {
   default     = false
 }
 
-variable "pgp_key" {
-
-  description = "Either a base-64 encoded PGP public key, or a keybase username in the form keybase:username. Used to encrypt password and access key."
-  default     = "keybase:test"
-
-}
-
 variable "password_reset_required" {
   description = "Whether the user should be forced to reset the generated password on first login."
   default     = true
@@ -76,7 +69,6 @@ variable "ssh_key_encoding" {
 variable "ssh_public_key" {
   description = "The SSH public key. The public key must be encoded in ssh-rsa format or PEM format"
   default = "rajashekar"
-#default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDYfYUU9+7klqiy02xB3Cx82/8pzpNic8jFSEDIK1SQ4WkP2DBl17HnYEB5aPIQnySTlZbT6zkNVKq7mEKNhPmqCMhcq7LkwnKXEBoNt2CzopNYIGWe18Ylmk6hzXR1uQfa/q50OpN4sAKC94GHcVICWDk/sH1ICHtyOPftnx/WTzKi/DO/wGEQZ5axcRbs+RUOXjAAoNbd6oHyuq6YIa89LyHY2SDpzBzullpAxdzEjD2QUCIJg/FBlFXqsMwdoufyxxs/6DL7LJCEWudYwcyihnSVwJu4QmtIky0nINdKil/tnRf5BsQXh/L+CAz1yI9MsUNn9SuSnYUF4MjA9dfb vagrant@vagrant-ubuntu-trusty-64"
 }
 
 variable "region" {
